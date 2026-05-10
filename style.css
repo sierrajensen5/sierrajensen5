@@ -2,25 +2,29 @@
 
 
 body{
-	background-color:white;
+	background-color: #F2EFF6;
 	font-family:"Open Sans", sans-serif;
 	margin:0;
 }
 
 h1,h2,h3{
 	font-family: "Play", sans-serif;
-	color:purple;
+	color: #8D00A3;
+}
+h2{
+	border-bottom: purple solid 3px; 
+
 }
 header{
-	background-color:#00195C;
-	color:purple;
+	background-color: #352747;
+	color: #9F13BE;
 	text-align:center;
 }
 
 header h1{
 	line-height:200%;
 	margin:0;
-	color: plum;
+	color: #C2B3D5;
 	text-align: center;
 }
 main{
@@ -32,7 +36,7 @@ max-width: 800px;
  /* Navigation */
 nav{
   text-align: center;
-  background-color: lavenderblush;
+  background-color: #C2B3D5;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
 }
@@ -49,13 +53,13 @@ nav a{
   text-decoration: none;
 }
 nav a:link{
-  color: purple;
+  color: #352747;
 }
 nav a:visited{
   color: purple;
 }
 nav a:hover{
-  color: blueviolet;
+  color: #8149B6;
 }
 nav a:active{
   color: purple;
@@ -124,11 +128,14 @@ td{
 footer{
 	max-width:1000px;
 	margin: auto;
-	padding: 10px;
+	padding: 20px;
 	font-style: italic;
 	text-align: center;
+	background-color: #C2B3D5;
 }
-
+.game-controls{
+	text-align: center;
+}
 /* JavaScript Game changes for mobile */
 .mobile{
 	display:none;
@@ -142,3 +149,4 @@ footer{
 		touch-action: manipulation;
 	}
 }
+
