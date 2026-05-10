@@ -35,22 +35,47 @@
       </ul>
   </nav>
 	<main>
-    <h1>JavaScript Flappy Bird Game</h1>
-    <p>I made this game using the W3 Schools JavaScript Tutorial. I enhanced the game by adding CSS, adding a new background to the game, and by making it larger.</p>
+    <h1>JavaScript Flappy Bird Game <i class="fa fa-code" aria-hidden="true"></i></h1>
 
-    <h1>How to Play</h1>
+    <p>Welcome to the JavaScript Game page!</p>
+    <p>I made this game for my Web Fundamentals class using the W3 Schools JavaScript Tutorial, which is inspired by the Flappy Bird Game!</p>
 
-    <p>To play the game, use FLAP WINGS to move Up and Down.</p>
+    <p>Have you heard of that game? Well here is my version!</p>
 
-    <p>Click PLAY AGAIN to play again.</p>
+    <p>I enhanced the game by adding CSS, adding a new background to the game, and by making it larger.</p>
 
-    <b>How long will you last? Play to find out!</b>
+    <p><b>Do you want to give this game a try? Look at the instructions down below!</b></p>
+
+    <p>(This game works for both Computer & Mobile users. Don't believe me? Give it a try!)</p>
+
+    <div style="width: 50%; margin: 0 auto; text-align: center; border: 1px solid black;">
+      <h2>How to Play</h2>
+</div>
+
+    <div style="width: 50%; margin: 0 auto; text-align: center; border: 1px solid black;">
+      <p>To play the game, use the "FLAP WINGS" button to move Up and Down.</p>
+</div>
+
+    <div style="width: 50%; margin: 0 auto; text-align: center; border: 1px solid black;">
+      <p>Click the "PLAY AGAIN" button to play again.</p>
+</div>
+
+    <div style="width: 50%; margin: 0 auto; text-align: center; border: 1px solid black;">
+      <p><b>How long will you last? Play to find out!</b></p>
+</div>
 
     <div id="game" ></div>
+    <!--There are two versions of controls...one for desktop that uses a mouse and one for mobile devices The desktop has the desktop class and the mobile has the mobile class-->
     <div class="game-controls desktop">
-        <button class="myButton" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">FLAP WINGS</button>
-        <a href=""><button class="myButton">PLAY AGAIN</button></a>
+      <button class="myButton" onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">FLAP WINGS</button>
+      <a href="" ><button class="myButton">PLAY AGAIN</button></a>
     </div>
+              
+    <div class="game-controls mobile">
+      <button class="myButton" ontouchstart="accelerate(-0.2)" ontouchend="accelerate(0.05)">FLAP WINGS</button>
+      <a href="" ><button class="myButton">PLAY AGAIN</button></a>
+</div>
+
 
 </body>
 
@@ -79,8 +104,9 @@ if (window.innerWidth < 768){
       var myGameArea = {
           canvas : document.createElement("canvas"),
           start : function() {
-              this.canvas.width = 640;
-              this.canvas.height = 360;
+              this.canvas.width = canvasWidth;/*Changed the number variable */
+              this.canvas.height = canvasHeight;/*Changed the number variable */
+
               this.context = this.canvas.getContext("2d");
               var myGame = document.getElementById("game");
               myGame.insertBefore(this.canvas, myGame.childNodes[0]);        
@@ -184,13 +210,27 @@ if (window.innerWidth < 768){
       }
 
     </script>
+
+    <h2><center>Thank you for playing my game!</center></h2>
+    <p>If you have any inquiries about the game or if you'd like to leave a comment, go to the <a href="contact.html">Contact</a> Page and fill out the contact form.</p>
 </main>
 <footer>
-		<a href="https://saintpaul.edu">Saint Paul College</a><br>
-		<a href="sierra.jensen@my.saintpaul.edu">Email Me</a><br>
-		<small>&copy; 2026 Sierra Jensen. All rights reserved.</small>
-
-	</footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>This is a website I made for my Web Fundamentals class. I took that course for the Visualization & Graphics Degree at the Saint Paul College. This website was uploaded to GitHub.</p><h2><i class="fa fa-github-square" aria-hidden="true"></i></h2>
+        </div>
+        <div class="col-sm-6">
+          <a href="https://www.linkedin.com/in/sierra-jensen-323365308/" target="_blank">
+            <h4><i class="fa fa-linkedin-square" aria-hidden="true"></i>Connect on LinkedIn</h4>
+          </a>
+          <a href="https://saintpaul.edu">Saint Paul College</a><br>
+          <a href="mailto:sierra.jensen@my.saintpaul.edu">Email Me</a><br>
+          <small>&copy; 2026 Sierra jensen. All rights reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!--jQuery, Popper, and Bootstrap Javascript files-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
